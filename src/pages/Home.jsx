@@ -1,4 +1,11 @@
-export default function Home() {
-    return <h2>Home</h2>;
+import Layout from "./Layout";
 
+import CreateNote from "./components/home/CreateNote";
+
+export default function Home() {
+    return (
+        <Layout>
+            <CreateNote></CreateNote>
+        </Layout>
+    );
 }
