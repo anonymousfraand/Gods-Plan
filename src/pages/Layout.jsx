@@ -21,7 +21,7 @@ export default function Layout(props) {
     }
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="static" color="secondary">
                 <Toolbar className="d-flex justify-content-between">
                     <Typography variant="h6" className="font-weight-bold">
                         God's Plan

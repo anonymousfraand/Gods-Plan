@@ -34,7 +34,7 @@ export default function Login() {
         <div className="container d-flex align-items-center justify-content-center flex-column" 
         style={{minHeight:"100vh"}}>
             <h2 className="mb-4">God's Plan</h2>
-            <Button variant="contained" color="primary" style={{ textTransform: "capitalize" }}
+            <Button variant="contained" color="secondary" style={{ textTransform: "capitalize" }}
             onClick={signInWithGoogle}
             >
                 Sign In With Google

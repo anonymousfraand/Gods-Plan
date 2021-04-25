@@ -58,7 +58,7 @@ export default function CreateNote() {
             <div className="container col-md-8 col-xl-6 mt-4">
                 <form action="#">
                     <Textfield id="note" label="Create a new note..."
-                    variant="filled" rows={4} 
+                    variant="filled" color="secondary"rows={4} 
                     className="shadow-sm" 
                     fullWidth
                     multiline
@@ -67,7 +67,7 @@ export default function CreateNote() {
                     />
                     <Button
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         className="d-flex ml-auto mt-3 text-capitalize font-weight-bold"
                         onClick={handleSubmitClick}
                         >
