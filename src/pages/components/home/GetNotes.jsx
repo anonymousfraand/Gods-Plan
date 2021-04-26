@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
 import "../../firebase";
 
-export default function GetNotes() {
+import Notes from "./Notes";
+import NotesLoader from "./NotesLoader";
 
-    const [state, useState] = useState({
+export default function GetNotes() {
+    const Loader = NotesLoader(Notes);
+    const [state, setState] = useState({
         isLoaded: false,
         notes: null,
     });
@@ -15,8 +18,20 @@ export default function GetNotes() {
         db.collection("notes")
         .get()
         .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {});
+            querySnapshot.forEach((doc) => {
+                const docData={
+                    id: doc.id,
+                    created: doc.data().created,
+                    note: doc.data().note,
+                };
+                notes.push(docData);
+            });
+            setState({ isLoaded: true, notes: notes });
         });
-    }, [input]);
-    return <div className="container mt-5"></div>;
+    }, [setState]);
+    return (
+    <div className="container mt-5">
+        <Loader isLoaded={state.isLoaded} notes={state.notes} />
+    </div>
+    );
 }
