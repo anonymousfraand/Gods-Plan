@@ -55,10 +55,10 @@ export default function CreateNote() {
 
     return(
         <>
-            <div className="container col-md-8 col-xl-6 mt-4">
+            <div className="container mt-4">
                 <form action="#">
                     <Textfield id="note" label="Create a new note..."
-                    variant="filled" color="secondary"rows={4} 
+                    variant="outlined" color="secondary"rows={4} 
                     className="shadow-sm" 
                     fullWidth
                     multiline
