@@ -4,7 +4,7 @@ import Card from "@material-ui/core/Card";
 export default function Notes(props) {
     const { notes } = props;
     if(!notes || notes.length === 0) {
-        return <p className="mt-5">You havenn't created any notes yet.</p>;
+        return <p className="mt-5">You haven't created any notes yet.</p>;
     }
     else {
         return (
