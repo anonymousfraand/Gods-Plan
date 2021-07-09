@@ -16,7 +16,19 @@ export default function CreateNote() {
     const handleClose = () => {
         setOpen(false);
     };
-
+    const showFile = async (e) => {
+        e.preventDefault()
+        const reader = new FileReader()
+        reader.onload = async (e) => { 
+        const text = (e.target.result)
+        console.log(text)
+       // alert(text)
+        setState(() => ({
+            note: text,
+        }));
+        };
+        reader.readAsText(e.target.files[0])
+    }
         const [state, setState] = useState({
             note: "",
         });
@@ -65,6 +77,7 @@ export default function CreateNote() {
                     onChange={handleChange}
                     value={state.note}
                     />
+                    <input type="file" className="btn btn-secondary"  accept=".txt" onChange={(e) => showFile(e)} />
                     <Button
                         variant="contained"
                         color="secondary"
