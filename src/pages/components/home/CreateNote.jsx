@@ -77,7 +77,7 @@ export default function CreateNote() {
                     onChange={handleChange}
                     value={state.note}
                     />
-                    <input type="file" className="btn btn-secondary"  accept=".txt" onChange={(e) => showFile(e)} />
+                    <input type="file" className="btn btn-danger" accept=".txt" onChange={(e) => showFile(e)} />
                     <Button
                         variant="contained"
                         color="secondary"
