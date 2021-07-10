@@ -27,7 +27,7 @@ export default function Notes(props) {
                                     <Card key={note.id} className="card p-3">
                                         
                                         <h6 className="m-0">{note.note}</h6>
-                                        <button className= "btn btn-secondary" onClick={(e) => {ExportNotes(e)}}
+                                        <button className= "btn btn-danger" onClick={(e) => {ExportNotes(e)}}
                                         value={note.note}>
                                             Export
                                         </button>
